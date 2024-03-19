@@ -12,7 +12,6 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @vite(['resources/views/mantenimeinto/categoria-trabajador'])
 
         <!-- Styles -->
         @livewireStyles
