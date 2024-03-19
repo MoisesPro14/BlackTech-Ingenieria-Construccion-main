@@ -14,7 +14,11 @@
             </div>
 
             <div class="modal-body mt-4 text-left">
-                <p><strong>Nombres: </strong> {{ $categoria->descripcion }} </p>
+                @if(isset($categoria))
+                    <p><strong>Nombres: </strong> {{ $categoria->descripcion }} </p>
+                @else
+                    <p>Error: Categoría no encontrada</p>
+                @endif  
             </div>
 
             <div class="modal-footer">

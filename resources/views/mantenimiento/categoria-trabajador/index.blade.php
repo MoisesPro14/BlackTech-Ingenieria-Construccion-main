@@ -12,7 +12,7 @@
                         <li class="breadcrumb-item"><a href="{{ route('dash') }}"><i
                                     class="nav-icon fas fa-th mr-2"></i>Escritorio</a></li>
                         <li class="breadcrumb-item active"><i class="nav-icon fa fa-table mr-2"></i>Mantenimiento</li>
-                        <li class="breadcrumb-item active"><i class="fas fa-fw fa-share mr-2"></i>Categoría Trabajador</li>
+                        <li class="breadcrumb-item active"><i class="fas fa-fw fa-share mr-2"><a href="{{ route('mantenimiento.categoria-trabajador.index') }}"></a></i>Categoría Trabajador</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -57,7 +57,7 @@
                                 <i class="fas fa-file"></i>
                             </button>
                             <!--Ventana Modal para Crear--->
-                            @include('mantenimiento.categoria-trabajador.modal.crear')
+                            @include('mantenimiento.categorias.modal.crear')
                         @endcan
 
                         <hr>
@@ -107,9 +107,9 @@
                                             @endcan
                                         </td>
                                         <!--Ventana Modal para la Alerta de mostrar--->
-                                        @include('mantenimiento.categoria-trabajador.modal.mostrar')
+                                        @include('mantenimiento.categorias.modal.mostrar')
                                         <!--Ventana Modal para Editar--->
-                                        @include('mantenimiento.categoria-trabajador.modal.editar')
+                                        @include('mantenimiento.categorias.modal.editar')
                                     </tr>
                                 @endforeach
                             </tbody>

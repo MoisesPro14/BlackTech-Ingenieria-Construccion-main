@@ -79,10 +79,6 @@ Route::post('camestadousu/{id}', [App\Http\Controllers\UsuarioController::class,
 
 //rutas para mostrar la  categoria del trabajador
 Route::group(["middleware" => ['auth', 'Verified']], function () {
-    Route::get('/mamtenimiento/categoria-trabajador', function () {
-        return view('/index');
-    })->name('index');
 
-    Route::get("/categoria-trabajador", [App\Http\Controllers\CategoriaTrabajadorController::class, "index"])->name("categoria-trabajador.index");
-    Route::post("/categoria-trabajador", [App\Http\Controllers\CategoriaTrabajadorController::class, "send"])->name("categoria-trabajador.send");
+    Route::get('/mantenimiento/categoria-trabajador', [App\Http\Controllers\CategoriaTrabajadorController::class, 'index'])->name('mantenimiento.categoria-trabajador.index');
 });

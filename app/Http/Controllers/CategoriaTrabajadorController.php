@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 use App\Models\CategoriaTrabajador;
 
 class CategoriaTrabajadorController extends Controller
@@ -24,7 +25,8 @@ class CategoriaTrabajadorController extends Controller
     public function index()
     {
         $categoriatrabajadores = CategoriaTrabajador::all();
-        return view('mantenimiento.categoria-trabajador.index', compact('categoriatrabajadores'));
+        $categoria = Categoria::first();
+        return view('mantenimiento.categoria-trabajador.index', compact('categoriatrabajadores', 'categoria'));
     }
 
     /**
@@ -61,9 +63,10 @@ class CategoriaTrabajadorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($categoria)
     {
-        //
+        $categoria = CategoriaTrabajador::find($categoria);
+        return view('mantenimiento.categoria-trabajador.modal.index', compact('categoria'));
     }
 
     /**
