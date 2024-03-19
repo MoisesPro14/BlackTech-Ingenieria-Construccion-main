@@ -72,7 +72,7 @@ class CategoriaTrabajadorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     //EN el update psasmos los datos que recibiremos y actualizarà en la base de datos de la tabla Categoria de Trabajador ,
+    //EN el update psasmos los datos que recibiremos y actualizarà en la base de datos de la tabla Categoria de Trabajador ,
     //no olvidar pasar el modelo en los parametros de la funcion Update.
     public function edit(CategoriaTrabajador $categoriatrabajadore)
     {
@@ -93,7 +93,7 @@ class CategoriaTrabajadorController extends Controller
         ]);
 
         $categoriatrabajadore->update($request->all());
-         //una vez pasada los datos para actualizar ,nos redireccionara a la vista index y enviarà los datos a la db.
+        //una vez pasada los datos para actualizar ,nos redireccionara a la vista index y enviarà los datos a la db.
         return redirect()->route('categoriatrabajadores.index')->with('update', 'Registro actualizado correctamente');
     }
 

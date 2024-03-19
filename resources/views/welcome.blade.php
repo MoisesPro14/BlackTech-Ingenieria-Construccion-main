@@ -102,10 +102,10 @@
     <header>
         <div class="contenedor head">
             <h1> BlackTech Consulting</h1>
-            <button >
-                <a  href="{{ route('login') }}" class="text-sm text-green-500 dark:text-gray-500 underline">Iniciar
-                    Sesión</a>
-            </button>
+            <button>
+            <a  href="{{ route('login') }}" class="text-sm text-green-500 dark:text-gray-500 underline">Iniciar
+                        Sesión</a>
+                </button>
 
         </div>
     </header>

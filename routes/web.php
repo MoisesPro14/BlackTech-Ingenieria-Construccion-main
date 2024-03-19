@@ -3,7 +3,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReportesController;
-
+use App\Http\Controllers\TrabajadorController;
+use App\Models\Categoria;
+use Faker\Guesser\Name;
+use GuzzleHttp\Middleware;
+use Illuminate\Auth\Events\Verified;
+use JeroenNoten\LaravelAdminLte\AdminLte;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +27,7 @@ Route::middleware([
 });
 
 //rutas para modulo de configuracion de usuario
-Route::get('/NewPassword',  [App\Http\Controllers\UserSettingsControllerController::class, 'NewPassword'])->name('NewPassword')->middleware('auth');
+Route::get('/NewPassword',  [App\Http\Controllers\UserSettingsControllerController::class, 'NewPassword'])->name('NewPassword')->middleware(['auth', 'verified']);
 Route::post('/change/password',  [App\Http\Controllers\UserSettingsControllerController::class, 'changePassword'])->name('changePassword');
 
 // rutas para modulo de membresia (roles y permisos)
@@ -71,3 +76,13 @@ Route::post('cambestadotra/{id}', [App\Http\Controllers\TrabajadorController::cl
 Route::post('camestadocat/{id}', [App\Http\Controllers\CategoriasController::class, 'cambiarEstado']);
 
 Route::post('camestadousu/{id}', [App\Http\Controllers\UsuarioController::class, 'cambiarEstado']);
+
+//rutas para mostrar la  categoria del trabajador
+Route::group(["middleware" => ['auth', 'Verified']], function () {
+    Route::get('/mamtenimiento/categoria-trabajador', function () {
+        return view('/index');
+    })->name('index');
+
+    Route::get("/categoria-trabajador", [App\Http\Controllers\CategoriaTrabajadorController::class, "index"])->name("categoria-trabajador.index");
+    Route::post("/categoria-trabajador", [App\Http\Controllers\CategoriaTrabajadorController::class, "send"])->name("categoria-trabajador.send");
+});
