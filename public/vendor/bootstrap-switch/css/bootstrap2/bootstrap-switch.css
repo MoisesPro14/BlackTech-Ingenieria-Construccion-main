@@ -8,7 +8,7 @@
   */
 
 .clearfix {
-  *zoom: 1;
+  zoom: 1;
 }
 .clearfix:before,
 .clearfix:after {
@@ -104,7 +104,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0044cc', endColorstr='#ff0088cc', GradientType=0);
   border-color: #08c #08c #005580;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #08c;
+  background-color: #08c;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -122,7 +122,7 @@
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary[disabled] {
   color: #fff;
   background-color: #08c;
-  *background-color: #0077b3;
+  background-color: #0077b3;
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:active,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:active,
@@ -144,7 +144,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f96b4', endColorstr='#ff5bc0de', GradientType=0);
   border-color: #5bc0de #5bc0de #28a1c5;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #5bc0de;
+  background-color: #5bc0de;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -162,7 +162,7 @@
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info[disabled] {
   color: #fff;
   background-color: #5bc0de;
-  *background-color: #46b8da;
+  background-color: #46b8da;
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info:active,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info:active,
@@ -184,7 +184,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff51a351', endColorstr='#ff62c462', GradientType=0);
   border-color: #62c462 #62c462 #3b9e3b;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #62c462;
+  background-color: #62c462;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -202,7 +202,7 @@
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success[disabled] {
   color: #fff;
   background-color: #62c462;
-  *background-color: #4fbd4f;
+  background-color: #4fbd4f;
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success:active,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success:active,
@@ -224,7 +224,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff89406', endColorstr='#fffbb450', GradientType=0);
   border-color: #fbb450 #fbb450 #f89406;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #fbb450;
+  background-color: #fbb450;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -242,7 +242,7 @@
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning[disabled] {
   color: #fff;
   background-color: #fbb450;
-  *background-color: #faa937;
+  background-color: #faa937;
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning:active,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning:active,
@@ -264,7 +264,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd362f', endColorstr='#ffee5f5b', GradientType=0);
   border-color: #ee5f5b #ee5f5b #e51d18;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #ee5f5b;
+  background-color: #ee5f5b;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -282,7 +282,7 @@
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger[disabled] {
   color: #fff;
   background-color: #ee5f5b;
-  *background-color: #ec4844;
+  background-color: #ec4844;
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger:active,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger:active,
@@ -304,7 +304,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffffffff', GradientType=0);
   border-color: #fff #fff #d9d9d9;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #fff;
+  background-color: #fff;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -322,7 +322,7 @@
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default[disabled] {
   color: #333;
   background-color: #fff;
-  *background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default:active,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default:active,
@@ -349,7 +349,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #e6e6e6;
+  background-color: #e6e6e6;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -361,7 +361,7 @@
 .bootstrap-switch .bootstrap-switch-label[disabled] {
   color: #333;
   background-color: #e6e6e6;
-  *background-color: #d9d9d9;
+  background-color: #d9d9d9;
 }
 .bootstrap-switch .bootstrap-switch-label:active,
 .bootstrap-switch .bootstrap-switch-label.active {

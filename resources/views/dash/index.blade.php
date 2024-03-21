@@ -213,8 +213,8 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-    <link rel="stylesheet" href="/vendor/adminlte/dist/css/adminlte.css">
+    <link rel="stylesheet" ref="/css/admin_custom.css">
+    <link rel="stylesheet" ref="/vendor/adminlte/dist/css/adminlte.css">
 
     <!-- estilos para tablas profesionales datatable-->
     <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
