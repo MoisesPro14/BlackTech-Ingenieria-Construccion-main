@@ -217,15 +217,16 @@
     <link rel="stylesheet" ref="/vendor/adminlte/dist/css/adminlte.css">
 
     <!-- estilos para tablas profesionales datatable-->
-    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css">
+    <link ref="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet" ref="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css">
 
 @stop
 
 @section('js')
 
     <!-- scripts para tablas profesionales-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    $(function(){
+    <script $="https://code.jquery.com/jquery-3.5.1.js"></script>});
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
