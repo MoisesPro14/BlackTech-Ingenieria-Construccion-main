@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\LibretaTiempo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 class LibretaTiempoController extends Controller
 {
     //Constructor para controlar permisos
@@ -25,19 +26,19 @@ class LibretaTiempoController extends Controller
     {
         if ($request->ajax()) {
             $libretas = DB::table('libreta_tiempo as lt')
-            ->select('t.nombres as nombres','t.apellidos as apellidos','lt.semana', 'lt.dia', 'lt.horas','ob.nombre as obra','u.name as user')
-            ->join('obra_trabajador as ot','ot.id','=','lt.obra_trabajador_id')
-            ->join('obras as ob','ob.id','=','ot.obra_id')
-            ->join('trabajadores as t','t.id','=','ot.trabajador_id')
-            ->join('users as u','u.id','=','lt.user_id')
-            ->orderBy('lt.semana','desc')
-            ->get()
-            ->toArray();
+                ->select('t.nombres as nombres', 't.apellidos as apellidos', 'lt.semana', 'lt.dia', 'lt.horas', 'ob.nombre as obra', 'u.name as user')
+                ->join('obra_trabajador as ot', 'ot.id', '=', 'lt.obra_trabajador_id')
+                ->join('obras as ob', 'ob.id', '=', 'ot.obra_id')
+                ->join('trabajadores as t', 't.id', '=', 'ot.trabajador_id')
+                ->join('users as u', 'u.id', '=', 'lt.user_id')
+                ->orderBy('lt.semana', 'desc')
+                ->get()
+                ->toArray();
             return datatables()
-            ->of($libretas)
-            ->addColumn('btn','proyectos.libretatiempo.actions')
-            ->rawColumns(['btn'])
-            ->toJson();
+                ->of($libretas)
+                ->addColumn('btn', 'proyectos.libretatiempo.actions')
+                ->rawColumns(['btn'])
+                ->toJson();
         }
 
         return view('proyectos.libretatiempo.index');
@@ -50,7 +51,6 @@ class LibretaTiempoController extends Controller
     public function create()
     {
         return view("proyectos.libretatiempo.crear");
-
     }
 
     /**
@@ -61,7 +61,6 @@ class LibretaTiempoController extends Controller
      */
     public function store(Request $request)
     {
-
     }
 
     /**
@@ -82,7 +81,6 @@ class LibretaTiempoController extends Controller
      */
     public function edit($id)
     {
-
     }
 
     /**
@@ -94,7 +92,6 @@ class LibretaTiempoController extends Controller
      */
     public function update(Request $request, LibretaTiempo $libretatiempo)
     {
-
     }
 
     /**
@@ -105,6 +102,5 @@ class LibretaTiempoController extends Controller
      */
     public function destroy($id)
     {
-
     }
 }

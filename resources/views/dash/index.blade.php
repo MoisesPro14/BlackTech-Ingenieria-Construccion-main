@@ -190,7 +190,7 @@
                 </div>
                 <div class="card-body">
                     <div class="chart">
-                        <canvas id="lineChart"
+                        <canvas width="640" height="480" id="myChart"
                             style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                 </div>
@@ -215,6 +215,10 @@
 @section('css')
     <link rel="stylesheet" ref="/css/admin_custom.css">
     <link rel="stylesheet" ref="/vendor/adminlte/dist/css/adminlte.css">
+    <link rel="stylesheet" ref="vendor/chart.js/Chart.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- estilos para tablas profesionales datatable-->
     <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -225,14 +229,20 @@
 @section('js')
 
     <!-- scripts para tablas profesionales-->
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/js/select2.min.js"
+        integrity="sha512-9p/L4acAjbjIaaGXmZf0Q2bV42HetlCLbv8EP0z3rLbQED2TAFUlDvAezy7kumYqg5T8jHtDdlm1fgIsr5QzKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- ChartJS -->
+
     <script src="vendor/chart.js/Chart.min.js"></script>
+
 
     <!-- Alerta de bienvenida del panel de administración -->
     <script>
@@ -240,12 +250,12 @@
             'Panel de Administración',
             'Haz Click en el boton!',
             'success'
-        )
-    </script>
+        ) /*< />*/
 
-    <!-- scripts para funcionalidad de tabla profesional-->
+        //scripts para funcionalidad de tabla profesional
 
-    <script>
+        /* <
+         script >*/
         $(document).ready(function() {
             $(document).ready(function() {
                 $('#tbmantenimiento').DataTable({
@@ -377,24 +387,24 @@
             //-------------
             //- LINE CHART -
             //--------------
-            var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
-            var lineChartOptions = $.extend(true, {}, areaChartOptions)
-            var lineChartData = $.extend(true, {}, areaChartData)
-            lineChartData.datasets[0].fill = false;
-            lineChartData.datasets[1].fill = false;
-            lineChartOptions.datasetFill = false
+            /*   var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+               var lineChartOptions = $.extend(true, {}, areaChartOptions)
+               var lineChartData = $.extend(true, {}, areaChartData)
+               lineChartData.datasets[0].fill = false;
+               lineChartData.datasets[1].fill = false;
+               lineChartOptions.datasetFill = false
 
-            var lineChart = new Chart(lineChartCanvas, {
-                type: 'line',
-                data: lineChartData,
-                options: lineChartOptions
-            })
+               var lineChart = new Chart(lineChartCanvas, {
+                   type: 'line',
+                   data: lineChartData,
+                   options: lineChartOptions
+               })*/
 
             //-------------
             //- DONUT CHART -
             //-------------
             // Get context with jQuery - using jQuery's .get() method.
-            var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+            var donutChartCanvas = $('#myChart').get(0).getContext('2d')
             var donutData = {
                 labels: [
                     'Chrome',
@@ -425,24 +435,24 @@
             //- PIE CHART -
             //-------------
             // Get context with jQuery - using jQuery's .get() method.
-            var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-            var pieData = donutData;
-            var pieOptions = {
-                maintainAspectRatio: false,
-                responsive: true,
-            }
-            //Create pie or douhnut chart
-            // You can switch between pie and douhnut using the method below.
-            new Chart(pieChartCanvas, {
-                type: 'pie',
-                data: pieData,
-                options: pieOptions
-            })
+            /* var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+             var pieData = donutData;
+             var pieOptions = {
+                 maintainAspectRatio: false,
+                 responsive: true,
+             }
+             //Create pie or douhnut chart
+             // You can switch between pie and douhnut using the method below.
+             new Chart(pieChartCanvas, {
+                 type: 'pie',
+                 data: pieData,
+                 options: pieOptions
+             })*/
 
             //-------------
             //- BAR CHART -
             //-------------
-            var barChartCanvas = $('#barChart').get(0).getContext('2d')
+            /*var barChartCanvas = $('#barChart').get(0).getContext('2d')
             var barChartData = $.extend(true, {}, areaChartData)
             var temp0 = areaChartData.datasets[0]
             var temp1 = areaChartData.datasets[1]
@@ -459,12 +469,12 @@
                 type: 'bar',
                 data: barChartData,
                 options: barChartOptions
-            })
+            })*/
 
             //---------------------
             //- STACKED BAR CHART -
             //---------------------
-            var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
+            /*var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
             var stackedBarChartData = $.extend(true, {}, barChartData)
 
             var stackedBarChartOptions = {
@@ -484,7 +494,7 @@
                 type: 'bar',
                 data: stackedBarChartData,
                 options: stackedBarChartOptions
-            })
+            })*/
         })
     </script>
 

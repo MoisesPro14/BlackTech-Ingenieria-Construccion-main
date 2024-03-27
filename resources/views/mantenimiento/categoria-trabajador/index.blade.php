@@ -12,7 +12,9 @@
                         <li class="breadcrumb-item"><a href="{{ route('dash') }}"><i
                                     class="nav-icon fas fa-th mr-2"></i>Escritorio</a></li>
                         <li class="breadcrumb-item active"><i class="nav-icon fa fa-table mr-2"></i>Mantenimiento</li>
-                        <li class="breadcrumb-item active"><i class="fas fa-fw fa-share mr-2"><a href="{{ route('mantenimiento.categoria-trabajador.index') }}"></a></i>Categoría Trabajador</li>
+                        <li class="breadcrumb-item active"><i class="fas fa-fw fa-share mr-2"><a
+                                    href="{{ route('mantenimiento.categoria-trabajador.index') }}"></a></i>Categoría
+                            Trabajador</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -130,6 +132,9 @@
     <!-- estilos para tablas profesionales datatable-->
     <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- estilos para botones de exportación-->
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css">
@@ -143,6 +148,10 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/js/select2.min.js"
+        integrity="sha512-9p/L4acAjbjIaaGXmZf0Q2bV42HetlCLbv8EP0z3rLbQED2TAFUlDvAezy7kumYqg5T8jHtDdlm1fgIsr5QzKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <!-- scripts para exportación de archivos-->
     <script src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
