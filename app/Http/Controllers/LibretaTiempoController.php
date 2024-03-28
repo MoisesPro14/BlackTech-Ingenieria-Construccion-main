@@ -50,8 +50,22 @@ class LibretaTiempoController extends Controller
      */
     public function create()
     {
-        return view("proyectos.libretatiempo.crear");
+
+        $libreta_tiempo = DB::table('libreta_tiempo as lt')
+            ->select(DB::raw('CONCAT(lt.id, "-",lt.semana, "-",lt.dia, "-", lt.horas) as libreta_tiempo'), 'lt.id')
+            ->get();
+
+        $obra_trabajador = DB::table('obra_trabajador')->select('obra_id')->get();
+        $trabajadores = DB::table('trabajadores')->select('id', 'nombres', 'apellidos')->get();
+        $obras = DB::table('obras as o')
+            ->select(DB::raw('CONCAT(o.id," - ",o.nombre) as obras'), 'o.id')
+            ->get();
+        $user = DB::table('users as u')
+            ->first();
+
+        return view("proyectos.libretatiempo.crear", compact('libreta_tiempo', 'obra_trabajador', 'obras', 'trabajadores', 'user'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -61,6 +75,19 @@ class LibretaTiempoController extends Controller
      */
     public function store(Request $request)
     {
+        $libreta_tiempo = new LibretaTiempo();
+
+        // Asigna los valores de los campos del formulario a las propiedades del objeto
+        $libreta_tiempo->semana = $request->semana;
+        $libreta_tiempo->dia = $request->dia;
+        $libreta_tiempo->horas = $request->horas;
+        $libreta_tiempo->obra_trabajador_id = $request->obra_id;
+        $libreta_tiempo->user_id = $request->user;
+
+        $libreta_tiempo->save();
+
+        // Redirige al usuario a la página de índice con un mensaje de éxito
+        return redirect()->route('proyectos.libretatiempo.index')->with('success', 'Los datos se guardaron correctamente.');
     }
 
     /**
